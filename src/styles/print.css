@@ -1,0 +1,53 @@
+/* =========================================
+   PRINT STYLES - A4 LAYOUT
+   ========================================= */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+    margin: 0;
+    padding: 0;
+    background: #ffffff !important;
+    font-size: 11pt;
+  }
+
+  /* Hide everything except the CV preview */
+  body > *:not(#print-root) {
+    display: none !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .cv-page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 15mm 18mm;
+    margin: 0;
+    box-shadow: none !important;
+    border: none !important;
+    page-break-inside: avoid;
+  }
+
+  .cv-section {
+    page-break-inside: avoid;
+  }
+
+  .cv-experience-item,
+  .cv-education-item,
+  .cv-project-item {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
